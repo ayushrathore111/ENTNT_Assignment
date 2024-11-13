@@ -1,29 +1,15 @@
-// src/redux/store.js
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import jobReducer from './reducers/jobReducer';
+import candidateReducer from './reducers/candidateReducer';
+import assessmentReducer from './reducers/assessmentReducer';
 
-// Example of a simple reducer
-const initialState = {
-  jobPostings: [],
-  candidates: [],
-};
-
-function rootReducer(state = initialState, action) {
-  switch (action.type) {
-    case 'ADD_JOB_POSTING':
-      return {
-        ...state,
-        jobPostings: [...state.jobPostings, action.payload],
-      };
-    case 'ADD_CANDIDATE':
-      return {
-        ...state,
-        candidates: [...state.candidates, action.payload],
-      };
-    default:
-      return state;
-  }
-}
+const rootReducer = combineReducers({
+  jobPostings: jobReducer,
+  candidates: candidateReducer,
+  assessments: assessmentReducer,
+});
 
 const store = createStore(rootReducer);
 
 export default store;
+

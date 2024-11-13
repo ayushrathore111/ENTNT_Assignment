@@ -1,16 +1,17 @@
-// src/index.js
+// index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // React 18 method to render the app
-import { Provider } from 'react-redux'; // Import Provider
-import { BrowserRouter as Router } from 'react-router-dom'; // Import BrowserRouter for routing
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import store from './redux/Store';
 import App from './App';
-import store from './redux/Store'; // Import the store
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
 
 root.render(
-  <Provider store={store}>  {/* Wrap your app with Provider and pass store */}
-    <Router>  {/* Wrap with Router for navigation */}
+  <Provider store={store}>
+    <Router>
       <App />
     </Router>
   </Provider>
