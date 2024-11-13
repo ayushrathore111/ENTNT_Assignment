@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../static/QuestionForm.css';
 
 const QuestionForm = ({ onAddQuestion }) => {
   const [question, setQuestion] = useState('');
@@ -20,7 +21,7 @@ const QuestionForm = ({ onAddQuestion }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="question-form-container">
       <input
         type="text"
         value={question}
@@ -38,7 +39,10 @@ const QuestionForm = ({ onAddQuestion }) => {
           required
         />
       ))}
-      <select value={correctAnswer} onChange={(e) => setCorrectAnswer(Number(e.target.value))}>
+      <select 
+        value={correctAnswer} 
+        onChange={(e) => setCorrectAnswer(Number(e.target.value))}
+      >
         {options.map((_, index) => (
           <option key={index} value={index}>Correct Option {index + 1}</option>
         ))}

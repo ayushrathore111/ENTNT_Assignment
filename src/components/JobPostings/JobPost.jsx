@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../static/JobPost.css';
 const JobPost = ({ job, onEdit, onDelete }) => (
   <div>
     <h2>{job.title}</h2>

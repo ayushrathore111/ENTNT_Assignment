@@ -1,16 +1,17 @@
 import React from 'react';
+import '../../static/QuestionList.css';
 
 const QuestionList = ({ questions }) => (
-  <div>
+  <div className="question-list-container">
     {questions.map((q, index) => (
-      <div key={index}>
+      <div key={index} className="question-item">
         <h3>{q.question}</h3>
         <ul>
           {q.options.map((option, idx) => (
             <li key={idx}>{option}</li>
           ))}
         </ul>
-        <p>Correct Answer: Option {q.correctAnswer + 1}</p>
+        <p className="correct-answer">Correct Answer: Option {q.correctAnswer + 1}</p>
       </div>
     ))}
   </div>

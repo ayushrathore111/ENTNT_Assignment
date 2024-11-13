@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import JobList from '../components/JobPostings/JobList';
 import JobPostForm from '../components/JobPostings/JobPostForm';
-
+import '../static/Dashboard.css';
 const Dashboard = () => {
   const [selectedJob, setSelectedJob] = useState(null);
 

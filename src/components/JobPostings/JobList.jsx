@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteJob } from '../../redux/actions/jobPostingActions';
-
+import '../../static/JobList.css';
 const JobList = ({ onEdit }) => {
   const jobPostings = useSelector(state => state.jobPostings);
   const dispatch = useDispatch();

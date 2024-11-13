@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addJob, editJob } from '../../redux/actions/jobPostingActions';
-
+import '../../static/JobPostForm.css';
 const JobPostForm = ({ selectedJob, onCancel }) => {
   const [title, setTitle] = useState(selectedJob ? selectedJob.title : '');
   const [description, setDescription] = useState(selectedJob ? selectedJob.description : '');

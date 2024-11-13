@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import CandidateList from '../components/Candidates/CandidateList';
-
+import '../static/JobCandidates.css';
 const JobCandidates = ({ jobId }) => {
   const candidates = useSelector(state => 
     state.candidates.filter(candidate => candidate.jobId === jobId)

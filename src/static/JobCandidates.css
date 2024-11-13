@@ -1,0 +1,59 @@
+/* JobCandidates.css */
+
+.job-candidates-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+.job-candidates-container h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.candidate-list-container {
+    margin-bottom: 20px;
+}
+
+.candidate-list-container h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.candidate-list-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.candidate-list-container li {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-list-container li a {
+    font-size: 1.2rem;
+    color: #007BFF;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.candidate-list-container li a:hover {
+    text-decoration: underline;
+}
+
+.candidate-status {
+    color: #888;
+    font-size: 1rem;
+}

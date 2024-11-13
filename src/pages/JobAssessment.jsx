@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { addAssessment } from '../redux/actions/assessmentActions';
 import QuestionForm from '../components/Assessment/QuestionForm';
 import QuestionList from '../components/Assessment/QuestionList';
-
+import '../static/JobAssessment.css';
 const JobAssessment = ({ jobId }) => {
   const [questions, setQuestions] = useState([]);
   const dispatch = useDispatch();

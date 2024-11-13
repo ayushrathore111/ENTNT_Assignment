@@ -1,5 +1,5 @@
 import React from 'react';
-
+import '../../static/CandidateDetails.css'
 const CandidateDetails = ({ candidate }) => (
   <div>
     <h2>{candidate.name}</h2>
